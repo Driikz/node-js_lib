@@ -6,8 +6,8 @@ Array.prototype.removeUndefined = function() {
   return this.filter(e => e != null);
 };
 
-Array.prototype.removeNumber = function() {
-  return this.filter(e => !Number.isInteger(e));
+Array.prototype.removeNumber = function(i) {
+  return this.filter(e => isNaN(e));
 };
 
 module.exports = Array.prototype;
